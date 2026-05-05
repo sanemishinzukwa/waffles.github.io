@@ -6,7 +6,18 @@ const spinbtn = document.getElementById("spinbtn");
 let currentRotation = 0;
 const myaudio = document.getElementById("myaudio");
 const playbtn = document.getElementById("playbtn");
+let count = 10;
 
+const intervalid = setInterval(function(){
+    count --;
+    document.getElementById("counter").innerText = count;
+
+}, 1000);
+
+setTimeout(function(){
+    clearInterval(intervalid);
+    alert("counter Stopped");
+}, 10000)
 
 
 notfoundbtn.addEventListener("click",()=>{
@@ -46,5 +57,5 @@ spinbtn.style.background = "pink";
 
 playbtn.addEventListener("click", ()=>{
     myaudio.play();
-})
+}).addEventListener
 
